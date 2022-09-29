@@ -1,3 +1,16 @@
+/*
+Student No.:
+109550167
+Student Name:
+陳唯文
+Email:
+ben167.cs09@nycu.edu.tw
+SE tag:
+xnxcxtxuxoxsx
+Statement: I am fully aware that this program is not
+supposed to be posted to a public server, such as a
+public GitHub repository or a public web page.
+*/
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <unistd.h>
