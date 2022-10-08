@@ -39,10 +39,7 @@ int main()
                 stop = row * now;
             pid = fork();
             if(pid == 0){
-                pid = fork();
-                if(pid == 0)
-                {
-                    for(int i=row*(now-1); i<stop; i++)
+                for(int i=row*(now-1); i<stop; i++)
                     {
                         for(int j=0; j<size; j++)
                         {   
@@ -54,10 +51,6 @@ int main()
                             matC[i*size+j] = temp;
                         }             
                     }
-                    exit(0);
-                }
-                else
-                    wait(NULL);
                 exit(0);
             }         
         }
