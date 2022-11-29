@@ -26,7 +26,6 @@ typedef struct block {
 void *add = 0;
 Block *head = 0;
 static const size_t align_to = 32;
-int i = 0;
 
 void *malloc(size_t size)
 {

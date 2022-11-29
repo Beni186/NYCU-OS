@@ -26,10 +26,9 @@ typedef struct block {
 void *add = 0;
 Block *head = 0;
 static const size_t align_to = 32;
-int n=0;
+
 void *malloc(size_t size)
 {
-    n++;
     Block *cur = 0, *temp = 0;
     if(size)
     {
@@ -56,7 +55,7 @@ void *malloc(size_t size)
             cur = cur->next;
         }
         cur = temp;
-        
+
         if(cur->size == size)
         {
             cur->free = 0;
