@@ -54,8 +54,8 @@ void *malloc(size_t size)
             } 
             cur = cur->next;
         }
-        cur = temp;
 
+        cur = temp;
         if(cur->size == size)
         {
             cur->free = 0;
