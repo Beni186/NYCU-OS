@@ -115,14 +115,15 @@ void handle_tar()
             a->mode = S_IFDIR | stoi(hdr->mode, 0, 8);
             string tmp = hdr->name;
 			tmp.pop_back();
+
             if(tmp.find_first_of('/') == -1)
 				dir["root"].push_back(tmp);
-
             else
             {
                 int pos = tmp.find_last_of('/');
                 dir[tmp.substr(0, pos)].push_back(tmp.substr(pos+1));
             }
+            
             string tmp2 = "/";
             mpa[tmp2.append(tmp)] = a;
         }
@@ -162,7 +163,6 @@ int my_getattr(const char *path, struct stat *st)
     st->st_size = mpa[path]->size;
     st->st_mtime = mpa[path]->mtime;
     // printf("%s: %d\n", path, mpa[path]->mode);
-    printf("%s: %d\n", path, mpa[path]->mtime);
     return 0;
 }
 
