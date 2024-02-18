@@ -4,4 +4,4 @@
 * lab3 - parallel merge sort with threads
 * lab4 - malloc() replacement
 * lab5 - page replacement simulation
-* lab1 - user space file system (FUSE)
+* lab6 - user space file system (FUSE)
